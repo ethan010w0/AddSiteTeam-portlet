@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head />
+	<h:body>
+		<h:form>
+			<p:messages id="messages" showDetail="true" autoUpdate="true"
+				closable="true" />
+			<p:inputText id="name" value="#{AddSiteTeamAction.name}"></p:inputText>
+			<br />
+			<p:commandButton value="Add Team"
+				actionListener="#{AddSiteTeamAction.add()}" update="name"></p:commandButton>
+		</h:form>
+	</h:body>
+
+</f:view>
